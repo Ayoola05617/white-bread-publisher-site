@@ -1,69 +1,208 @@
+"use client";
+import { motion } from "motion/react";
 import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import FeaturedBooks from "@/components/FeaturedBooks";
+import AboutSection from "@/components/AboutSection";
+import WhyWhitebread from "@/components/WhyWhitebread";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Whitebread Publishers Limited",
+  url: "https://www.whitebreadpublishersltd.com.ng",
+  logo: "https://www.whitebreadpublishersltd.com.ng/books/abenii.jpg",
+  description:
+    "Whitebread Publishers Limited publishes educational and literary books designed to inspire learning, creativity, and intellectual growth.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "E22 Emirs Road",
+    addressLocality: "Ilorin",
+    addressRegion: "Kwara State",
+    addressCountry: "NG",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    telephone: "+2348056682443",
+    availableLanguage: ["English"],
+  },
+  sameAs: [],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Whitebread Publishers Limited",
+  url: "https://www.whitebreadpublishersltd.com.ng",
+  description:
+    "Educational and literary publications created to inspire learning, creativity, and intellectual growth.",
+  publisher: {
+    "@type": "Organization",
+    name: "Whitebread Publishers Limited",
+  },
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <Navbar />
+
+      {/* Hero */}
+      <section className="relative flex min-h-screen items-center overflow-hidden px-6 pb-16 pt-28 sm:pt-32 md:px-10 md:pb-20 lg:px-14 lg:pt-28">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+          {/* Hero Content */}
+          <div className="relative z-10">
+            <div className="mb-7 flex items-center gap-3">
+              <span className="h-px w-10 bg-[#7a2630]" />
+
+              <motion.p
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.15,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="text-[10px] font-medium uppercase tracking-[0.22em] text-[#6d6b65] sm:text-xs"
+              >
+                Whitebread Publishers Limited
+              </motion.p>
+            </div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 35 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.9,
+                delay: 0.25,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="max-w-4xl text-[4.5rem] leading-[0.82] tracking-[-0.045em] sm:text-[5.5rem] md:text-8xl lg:text-[9rem] xl:text-[10rem]"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              Books that
+              <br />
+              <span className="text-[#7a2630]">build minds.</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.7,
+                delay: 0.45,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="mt-8 max-w-lg text-base leading-7 text-[#6d6b65] md:text-lg"
             >
-              Learning
-            </a>{" "}
-            center.
+              Educational and literary publications created to inspire learning,
+              creativity, and intellectual growth.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.7,
+                delay: 0.6,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="mt-9 flex flex-wrap items-center gap-4"
+            >
+              <a
+                href="#books"
+                className="rounded-full bg-[#171a1d] px-6 py-3.5 text-sm font-medium text-[#f6f3ec] transition-all duration-300 hover:bg-[#7a2630]"
+                style={{ color: "#f6f3ec" }}
+              >
+                Explore our books
+              </a>
+
+              <a
+                href="#about"
+                className="group flex items-center gap-2 px-2 py-3.5 text-sm font-medium text-[#171a1d]"
+              >
+                Discover Whitebread
+                <span className="transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </a>
+            </motion.div>
+          </div>
+
+          {/* Hero Book Visual */}
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: 40,
+              rotate: -6,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              rotate: -3,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.35,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="relative mx-auto w-full max-w-[560px] lg:ml-auto"
+          >
+            <div className="absolute -right-4 -top-4 z-0 h-24 w-24 rounded-full border border-[#ddd8ce] sm:-right-6 sm:-top-6 sm:h-32 sm:w-32 md:-right-8 md:-top-8 md:h-44 md:w-44" />
+
+            <div className="relative z-10 mx-auto w-[72%] overflow-hidden bg-[#e8e3d9] shadow-[20px_25px_60px_rgba(23,26,29,0.18)] transition-transform duration-700 hover:rotate-0 sm:w-[68%] md:w-[65%]">
+              <Image
+                src="/books/abenii.jpg"
+                alt="Iya Abeni: The Saucy Woman by Deborah Oludele"
+                width={700}
+                height={950}
+                priority
+                className="h-auto w-full object-cover"
+                sizes="(max-width: 640px) 70vw, (max-width: 1024px) 40vw, 420px"
+              />
+            </div>
+
+            <div className="absolute -bottom-5 left-1/2 z-20 flex max-w-[90%] -translate-x-1/2 items-center gap-3 bg-[#f6f3ec] px-3 py-3 shadow-sm sm:left-0 sm:max-w-none sm:translate-x-0 sm:px-4">
+              <span className="h-2 w-2 shrink-0 rounded-full bg-[#7a2630]" />
+
+              <span className="whitespace-nowrap text-[8px] font-medium uppercase tracking-[0.14em] text-[#6d6b65] sm:text-[10px] sm:tracking-[0.18em]">
+                Educational · Literary · Purposeful
+              </span>
+            </div>
+          </motion.div>
+        </div>
+
+        <div className="absolute bottom-7 left-6 hidden items-center gap-3 md:flex lg:left-14">
+          <span className="text-[10px] uppercase tracking-[0.2em] text-[#6d6b65]">
+            Scroll to explore
+          </span>
+          <span className="h-px w-12 bg-[#ddd8ce]" />
+        </div>
+
+        <div className="absolute bottom-7 right-6 hidden text-right md:block lg:right-14">
+          <p className="text-[10px] uppercase tracking-[0.18em] text-[#6d6b65]">
+            E22 Emirs Road
+          </p>
+          <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-[#6d6b65]">
+            Ilorin, Kwara State
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+      <FeaturedBooks />
+      <AboutSection />
+      <WhyWhitebread />
+      <ContactSection />
+      <Footer />
+    </main>
   );
 }
