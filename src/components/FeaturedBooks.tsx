@@ -11,7 +11,7 @@ export default function FeaturedBooks() {
   return (
     <section
       id="books"
-      className="border-t border-[#ddd8ce] px-6 py-24 md:px-10 md:py-32 lg:px-14"
+      className="border-t border-[#dfe5f2] bg-[#fffaf0] px-6 py-24 md:px-10 md:py-32 lg:px-14"
     >
       <div className="mx-auto max-w-[1440px]">
         {/* Section heading */}
@@ -27,9 +27,9 @@ export default function FeaturedBooks() {
         >
           <div>
             <div className="mb-5 flex items-center gap-3">
-              <span className="h-px w-8 bg-[#7a2630]" />
+              <span className="h-px w-8 bg-[#1d4ed8]" />
 
-              <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-[#6d6b65]">
+              <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-[#4f5d75]">
                 Our publications
               </p>
             </div>
@@ -37,13 +37,13 @@ export default function FeaturedBooks() {
             <h2 className="max-w-2xl text-5xl leading-[0.95] tracking-[-0.03em] md:text-7xl">
               Books for learning,
               <br />
-              <span className="text-[#7a2630]">
+              <span className="text-[#1d4ed8]">
                 discovery & growth.
               </span>
             </h2>
           </div>
 
-          <p className="max-w-sm text-sm leading-6 text-[#6d6b65]">
+          <p className="max-w-sm text-sm leading-6 text-[#4f5d75]">
             Explore a selection of educational and literary publications
             created for learners, educators, families, and institutions.
           </p>
@@ -88,7 +88,7 @@ export default function FeaturedBooks() {
         >
           <Link
             href="/books"
-            className="group inline-flex items-center gap-3 border-b border-[#171a1d] pb-2 text-sm font-medium"
+            className="group inline-flex items-center gap-3 border-b border-[#111827] pb-2 text-sm font-medium"
           >
             View all publications
 

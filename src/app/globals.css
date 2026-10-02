@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f6f3ec;
-  --ink: #171a1d;
-  --muted: #6d6b65;
-  --burgundy: #7a2630;
-  --border: #ddd8ce;
+  --paper: #fffaf0;
+  --ink: #111827;
+  --muted: #4f5d75;
+  --brand-yellow: #f5c84c;
+  --brand-yellow-soft: #fff1b8;
+  --brand-blue: #1d4ed8;
+  --brand-blue-deep: #102a6b;
+  --border: #dfe5f2;
   --white: #ffffff;
 }
 
@@ -47,9 +50,10 @@ a {
 }
 
 ::selection {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--brand-blue);
+  color: var(--white);
 }
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;

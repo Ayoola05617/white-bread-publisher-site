@@ -27,7 +27,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="border-t border-[#ddd8ce] px-6 py-24 md:px-10 md:py-32 lg:px-14"
+      className="border-t border-[#dfe5f2] bg-[#fffaf0] px-6 py-24 md:px-10 md:py-32 lg:px-14"
     >
       <div className="mx-auto max-w-[1440px]">
         {/* Intro */}
@@ -43,9 +43,9 @@ export default function AboutSection() {
             }}
           >
             <div className="mb-6 flex items-center gap-3">
-              <span className="h-px w-10 bg-[#7a2630]" />
+              <span className="h-px w-10 bg-[#1d4ed8]" />
 
-              <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-[#6d6b65]">
+              <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-[#4f5d75]">
                 About Whitebread
               </p>
             </div>
@@ -53,7 +53,7 @@ export default function AboutSection() {
             <h2 className="max-w-4xl text-5xl leading-[0.95] tracking-[-0.03em] md:text-7xl lg:text-[6.5rem]">
               Publishing
               <br />
-              <span className="text-[#7a2630]">with purpose.</span>
+              <span className="text-[#1d4ed8]">with purpose.</span>
             </h2>
           </motion.div>
 
@@ -69,14 +69,14 @@ export default function AboutSection() {
             }}
             className="flex flex-col justify-end lg:pb-2"
           >
-            <p className="max-w-xl text-base leading-7 text-[#6d6b65] md:text-lg md:leading-8">
+            <p className="max-w-xl text-base leading-7 text-[#4f5d75] md:text-lg md:leading-8">
               Whitebread Publishers Limited is a publishing company based in
               Kwara State, Nigeria, producing quality educational and literary
               materials that support learning, creativity, and intellectual
               development.
             </p>
 
-            <p className="mt-6 max-w-xl text-base leading-7 text-[#6d6b65] md:text-lg md:leading-8">
+            <p className="mt-6 max-w-xl text-base leading-7 text-[#4f5d75] md:text-lg md:leading-8">
               From textbooks and children&apos;s books to educational resources
               and other literary works, we create materials for schools,
               teachers, parents, and learners while working alongside authors,
@@ -94,7 +94,7 @@ export default function AboutSection() {
             duration: 0.9,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="my-20 h-px origin-left bg-[#ddd8ce] md:my-24"
+          className="my-20 h-px origin-left bg-[#dfe5f2] md:my-24"
         />
 
         {/* Focus areas */}
@@ -113,9 +113,9 @@ export default function AboutSection() {
                 delay: index * 0.1,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="border-l border-[#7a2630] pl-5"
+              className="border-l border-[#f5c84c] pl-5"
             >
-              <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-[#6d6b65]">
+              <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-[#4f5d75]">
                 {area.number}
               </p>
 
@@ -123,7 +123,7 @@ export default function AboutSection() {
                 {area.title}
               </h3>
 
-              <p className="mt-3 max-w-sm text-sm leading-6 text-[#6d6b65]">
+              <p className="mt-3 max-w-sm text-sm leading-6 text-[#4f5d75]">
                 {area.description}
               </p>
             </motion.div>

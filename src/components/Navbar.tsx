@@ -14,7 +14,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-[#f6f3ec]">
+    <header className="fixed inset-x-0 top-0 z-50 bg-[#fffaf0]">
       <nav className="mx-auto flex h-20 max-w-360 items-center justify-between px-6 md:px-10 lg:px-14">
         {/* Logo */}
         <Link
@@ -29,7 +29,7 @@ export default function Navbar() {
             Whitebread
           </span>
 
-          <span className="mt-1 text-[8px] font-medium uppercase tracking-[0.28em] text-[#6d6b65]">
+          <span className="mt-1 text-[8px] font-medium uppercase tracking-[0.28em] text-[#4f5d75]">
             Publishers Limited
           </span>
         </Link>
@@ -40,11 +40,11 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="group relative text-sm text-[#6d6b65] transition-colors duration-300 hover:text-[#171a1d]"
+              className="group relative text-sm text-[#4f5d75] transition-colors duration-300 hover:text-[#1d4ed8]"
             >
               {link.name}
 
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#7a2630] transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#f5c84c] transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </div>
@@ -52,8 +52,8 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <a
           href="#contact"
-          className="hidden rounded-full bg-[#171a1d] px-5 py-2.5 text-sm font-medium text-[#f6f3ec] transition-all duration-300 hover:bg-[#7a2630] md:block"
-          style={{ color: "#f6f3ec" }}
+          className="hidden rounded-full bg-[#1d4ed8] px-5 py-2.5 text-sm font-medium text-[#fffaf0] transition-all duration-300 hover:bg-[#102a6b] md:block"
+          style={{ color: "#fffaf0" }}
         >
           Get in touch
         </a>
@@ -68,19 +68,19 @@ export default function Navbar() {
         >
           <div className="flex w-5 flex-col gap-1.5">
             <span
-              className={`h-px w-full bg-[#171a1d] transition-transform duration-300 ${
+              className={`h-px w-full bg-[#111827] transition-transform duration-300 ${
                 menuOpen ? "translate-y-1 rotate-45" : ""
               }`}
             />
 
             <span
-              className={`h-px w-full bg-[#171a1d] transition-opacity duration-300 ${
+              className={`h-px w-full bg-[#111827] transition-opacity duration-300 ${
                 menuOpen ? "opacity-0" : ""
               }`}
             />
 
             <span
-              className={`h-px w-full bg-[#171a1d] transition-transform duration-300 ${
+              className={`h-px w-full bg-[#111827] transition-transform duration-300 ${
                 menuOpen ? "-translate-y-1 -rotate-45" : ""
               }`}
             />
@@ -90,20 +90,20 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <div
-        className={`absolute inset-x-0 top-0 -z-10 bg-[#f6f3ec] px-6 pt-24 transition-all duration-500 md:hidden ${
+        className={`absolute inset-x-0 top-0 -z-10 bg-[#fffaf0] px-6 pt-24 transition-all duration-500 md:hidden ${
           menuOpen
             ? "pointer-events-auto visible translate-y-0 opacity-100"
             : "pointer-events-none invisible -translate-y-4 opacity-0"
         }`}
       >
-        <div className="border-t border-[#ddd8ce] pb-8 pt-6">
+        <div className="border-t border-[#dfe5f2] pb-8 pt-6">
           <div className="flex flex-col">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="border-b border-[#ddd8ce] py-5 text-3xl"
+                className="border-b border-[#dfe5f2] py-5 text-3xl"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 {link.name}
@@ -114,8 +114,8 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
-            className="mt-6 block w-full rounded-full bg-[#171a1d] px-5 py-3.5 text-center text-sm font-medium text-[#f6f3ec]"
-            style={{ color: "#f6f3ec" }}
+            className="mt-6 block w-full rounded-full bg-[#1d4ed8] px-5 py-3.5 text-center text-sm font-medium text-[#fffaf0]"
+            style={{ color: "#fffaf0" }}
           >
             Get in touch
           </a>

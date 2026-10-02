@@ -11,8 +11,8 @@ export default function ContactSection() {
     },
     {
       label: "WhatsApp",
-      value: "+234 805 668 2443",
-      href: "https://wa.me/2348056682443",
+      value: "+234 816 997 5561",
+      href: "https://wa.me/2348169975561",
       external: true,
     },
   ];
@@ -20,7 +20,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="border-t border-[#ddd8ce] px-6 py-24 md:px-10 md:py-32 lg:px-14"
+      className="border-t border-[#dfe5f2] bg-[#fffaf0] px-6 py-24 md:px-10 md:py-32 lg:px-14"
     >
       <div className="mx-auto max-w-[1440px]">
         {/* Main CTA */}
@@ -36,9 +36,9 @@ export default function ContactSection() {
             }}
           >
             <div className="mb-6 flex items-center gap-3">
-              <span className="h-px w-10 bg-[#7a2630]" />
+              <span className="h-px w-10 bg-[#1d4ed8]" />
 
-              <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-[#6d6b65]">
+              <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-[#4f5d75]">
                 Get in touch
               </p>
             </div>
@@ -46,7 +46,7 @@ export default function ContactSection() {
             <h2 className="max-w-5xl text-[4rem] leading-[0.88] sm:text-6xl md:text-8xl lg:text-[8.5rem] tracking-[-0.04em] md:text-8xl lg:text-[8.5rem]">
               Let&apos;s work
               <br />
-              <span className="text-[#7a2630]">together.</span>
+              <span className="text-[#1d4ed8]">together.</span>
             </h2>
 
             <motion.p
@@ -58,7 +58,7 @@ export default function ContactSection() {
                 delay: 0.15,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="mt-8 max-w-xl text-base leading-7 text-[#6d6b65] md:text-lg md:leading-8"
+              className="mt-8 max-w-xl text-base leading-7 text-[#4f5d75] md:text-lg md:leading-8"
             >
               Whether you&apos;re looking for educational publications,
               exploring a publishing opportunity, or interested in working
@@ -68,7 +68,7 @@ export default function ContactSection() {
 
           {/* Contact details */}
           <div className="flex flex-col justify-end">
-            <div className="border-t border-[#ddd8ce]">
+            <div className="border-t border-[#dfe5f2]">
               {contactItems.map((item, index) => (
                 <motion.a
                   key={item.label}
@@ -83,10 +83,10 @@ export default function ContactSection() {
                     delay: index * 0.1,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="group flex items-center justify-between border-b border-[#ddd8ce] py-6"
+                  className="group flex items-center justify-between border-b border-[#dfe5f2] py-6"
                 >
                   <div>
-                    <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-[#6d6b65]">
+                    <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-[#4f5d75]">
                       {item.label}
                     </p>
 
@@ -95,7 +95,7 @@ export default function ContactSection() {
                     </p>
                   </div>
 
-                  <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
+                  <span className="text-xl text-[#1d4ed8] transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>
                 </motion.a>
@@ -114,7 +114,7 @@ export default function ContactSection() {
                 className="flex items-center justify-between py-6"
               >
                 <div>
-                  <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-[#6d6b65]">
+                  <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-[#4f5d75]">
                     Visit us
                   </p>
 
@@ -125,7 +125,7 @@ export default function ContactSection() {
                   </p>
                 </div>
 
-                <span className="text-[#7a2630]">●</span>
+                <span className="text-[#f5c84c]">●</span>
               </motion.div>
             </div>
           </div>
@@ -141,19 +141,19 @@ export default function ContactSection() {
             delay: 0.1,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mt-20 flex flex-col gap-6 border-t border-[#ddd8ce] pt-8 md:mt-28 md:flex-row md:items-center md:justify-between"
+          className="mt-20 flex flex-col gap-6 border-t border-[#dfe5f2] pt-8 md:mt-28 md:flex-row md:items-center md:justify-between"
         >
-          <p className="text-xs uppercase tracking-[0.16em] text-[#6d6b65]">
+          <p className="text-xs uppercase tracking-[0.16em] text-[#4f5d75]">
             Whitebread Publishers Limited
           </p>
 
           <a
             href="mailto:whitebreadpublishersltd@gmail.com"
-            className="group inline-flex items-center gap-3 text-sm font-medium"
+            className="group inline-flex items-center gap-3 text-sm font-medium text-[#111827]"
           >
             Start a conversation
 
-            <span className="transition-transform duration-300 group-hover:translate-x-1">
+            <span className="text-[#1d4ed8] transition-transform duration-300 group-hover:translate-x-1">
               →
             </span>
           </a>

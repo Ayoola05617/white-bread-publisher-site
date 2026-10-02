@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#ddd8ce] bg-[#171a1d] px-6 pb-8 pt-16 text-[#f6f3ec] md:px-10 md:pt-20 lg:px-14">
+    <footer className="border-t border-[#dfe5f2] bg-[#111827] px-6 pb-8 pt-16 text-[#fffaf0] md:px-10 md:pt-20 lg:px-14">
       <div className="mx-auto max-w-[1440px]">
         {/* Top content */}
         <motion.div
@@ -25,12 +25,12 @@ export default function Footer() {
                 Whitebread
               </div>
 
-              <div className="mt-1 text-[9px] uppercase tracking-[0.3em] text-[#aaa79f]">
+              <div className="mt-1 text-[9px] uppercase tracking-[0.3em] text-[#d9dfe8]">
                 Publishers Limited
               </div>
             </Link>
 
-            <p className="mt-8 max-w-md text-sm leading-7 text-[#aaa79f]">
+            <p className="mt-8 max-w-md text-sm leading-7 text-[#d9dfe8]">
               Quality educational and literary publications created to support
               learning, creativity, and intellectual development.
             </p>
@@ -38,35 +38,35 @@ export default function Footer() {
 
           {/* Explore */}
           <div>
-            <p className="mb-6 text-[10px] font-medium uppercase tracking-[0.2em] text-[#b8787f]">
+            <p className="mb-6 text-[10px] font-medium uppercase tracking-[0.2em] text-[#f5c84c]">
               Explore
             </p>
 
-            <nav className="flex flex-col items-start gap-4 text-sm text-[#aaa79f]">
+            <nav className="flex flex-col items-start gap-4 text-sm text-[#d9dfe8]">
               <Link
                 href="/books"
-                className="transition-colors duration-300 hover:text-[#f6f3ec]"
+                className="transition-colors duration-300 hover:text-[#fffaf0]"
               >
                 Books
               </Link>
 
               <Link
                 href="/#about"
-                className="transition-colors duration-300 hover:text-[#f6f3ec]"
+                className="transition-colors duration-300 hover:text-[#fffaf0]"
               >
                 About
               </Link>
 
               <Link
                 href="/#why-whitebread"
-                className="transition-colors duration-300 hover:text-[#f6f3ec]"
+                className="transition-colors duration-300 hover:text-[#fffaf0]"
               >
                 Why Whitebread
               </Link>
 
               <Link
                 href="/#contact"
-                className="transition-colors duration-300 hover:text-[#f6f3ec]"
+                className="transition-colors duration-300 hover:text-[#fffaf0]"
               >
                 Contact
               </Link>
@@ -75,25 +75,25 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="mb-6 text-[10px] font-medium uppercase tracking-[0.2em] text-[#b8787f]">
+            <p className="mb-6 text-[10px] font-medium uppercase tracking-[0.2em] text-[#f5c84c]">
               Contact
             </p>
 
-            <div className="flex flex-col gap-4 text-sm text-[#aaa79f]">
+            <div className="flex flex-col gap-4 text-sm text-[#d9dfe8]">
               <a
                 href="mailto:whitebreadpublishersltd@gmail.com"
-                className="transition-colors duration-300 hover:text-[#f6f3ec]"
+                className="transition-colors duration-300 hover:text-[#fffaf0]"
               >
                 whitebreadpublishersltd@gmail.com
               </a>
 
               <a
-                href="https://wa.me/2348056682443"
+                href="https://wa.me/2348169975561"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors duration-300 hover:text-[#f6f3ec]"
+                className="transition-colors duration-300 hover:text-[#fffaf0]"
               >
-                +234 805 668 2443
+                +234 816 997 5561
               </a>
 
               <p className="leading-6">
@@ -133,7 +133,7 @@ export default function Footer() {
             duration: 0.7,
             delay: 0.2,
           }}
-          className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[0.14em] text-[#77756f] md:flex-row md:items-center md:justify-between"
+          className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[0.14em] text-[#a9afbb] md:flex-row md:items-center md:justify-between"
         >
           <p>
             © {new Date().getFullYear()} Whitebread Publishers Limited
