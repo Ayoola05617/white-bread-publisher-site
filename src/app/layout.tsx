@@ -17,43 +17,65 @@ const headingFont = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.whitebreadpublishersltd.com.ng"),
   title: {
-    default: "Whitebread Publishers Limited | Educational & Literary Books",
+    default: "Whitebread Publishers Limited | Educational & Literary Books Nigeria",
     template: "%s | Whitebread Publishers Limited",
   },
   description:
-    "Whitebread Publishers Limited publishes educational and literary books designed to inspire learning, creativity, and strong ideas for learners, educators, and families.",
+    "Whitebread Publishers Limited is an award-winning Nigerian educational and literary publisher. We publish quality textbooks, children's stories, and learning resources for schools, educators, and families. Located in Ilorin, Kwara State.",
   applicationName: "Whitebread Publishers Limited",
   authors: [{ name: "Whitebread Publishers Limited" }],
+  creator: "Whitebread Publishers Limited",
+  publisher: "Whitebread Publishers Limited",
   keywords: [
     "Whitebread Publishers",
     "Whitebread Publishers Limited",
     "educational books Nigeria",
     "literary books Nigeria",
-    "school books Nigeria",
+    "school textbooks Nigeria",
     "publishing company Nigeria",
     "book publisher Kwara",
-    "books for schools",
-    "children books Nigeria",
+    "books for schools Nigeria",
+    "children's books Nigeria",
     "learning resources Nigeria",
+    "educational publisher Ilorin",
+    "quality textbooks",
+    "Nigerian publishers",
+    "Ilorin publishers",
   ],
   category: "education",
+  referrer: "strict-origin-when-cross-origin",
+  classification: "Education",
   alternates: {
     canonical: "/",
   },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "Whitebread Publishers Limited",
+    title: "Whitebread Publishers Limited - Educational & Literary Books",
     description:
-      "Educational and literary publications designed to inspire learning, creativity, and intellectual growth.",
+      "Discover quality educational textbooks, children's stories, and learning resources from Whitebread Publishers Limited, Nigeria's trusted educational publisher.",
     url: "https://www.whitebreadpublishersltd.com.ng",
     siteName: "Whitebread Publishers Limited",
     locale: "en_NG",
     type: "website",
+    countryName: "Nigeria",
     images: [
       {
         url: "/books/abenii.jpg",
         width: 1200,
         height: 1600,
-        alt: "Whitebread Publishers Limited book cover",
+        alt: "Iya Abeni book cover by Whitebread Publishers",
+        type: "image/jpeg",
       },
     ],
   },
@@ -61,11 +83,17 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Whitebread Publishers Limited",
     description:
-      "Educational and literary publications created to inspire learning and intellectual growth.",
+      "Quality educational and literary books from Nigeria's trusted publisher.",
     images: ["/books/abenii.jpg"],
+    creator: "@whitebreadpub",
+  },
+  verification: {
+    google: "",
+    yandex: "",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 };
 

@@ -1,0 +1,19 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle for favicon visibility -->
+  <circle cx="64" cy="64" r="64" fill="#1d4ed8"/>
+  
+  <!-- Book pages - left page -->
+  <path d="M40 35 L40 93 Q42 95 44 93 L56 93 L56 35 Z" fill="#fff1b8" opacity="0.9"/>
+  
+  <!-- Book pages - right page -->
+  <path d="M56 35 L56 93 L72 93 Q74 95 74 93 L74 35 Z" fill="#ffffff"/>
+  
+  <!-- Spine highlight -->
+  <rect x="54" y="35" width="4" height="58" fill="#f5c84c"/>
+  
+  <!-- Book pages detail lines -->
+  <line x1="46" y1="48" x2="66" y2="48" stroke="#1d4ed8" stroke-width="1.5" opacity="0.3"/>
+  <line x1="46" y1="58" x2="66" y2="58" stroke="#1d4ed8" stroke-width="1.5" opacity="0.3"/>
+  <line x1="46" y1="68" x2="66" y2="68" stroke="#1d4ed8" stroke-width="1.5" opacity="0.3"/>
+  <line x1="46" y1="78" x2="66" y2="78" stroke="#1d4ed8" stroke-width="1.5" opacity="0.3"/>
+</svg>

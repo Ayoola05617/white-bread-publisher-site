@@ -10,12 +10,54 @@ import Footer from "@/components/Footer";
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness", "Publisher"],
   name: "Whitebread Publishers Limited",
   url: "https://www.whitebreadpublishersltd.com.ng",
-  logo: "https://www.whitebreadpublishersltd.com.ng/books/abenii.jpg",
+  logo: "https://www.whitebreadpublishersltd.com.ng/favicon.svg",
+  image: "https://www.whitebreadpublishersltd.com.ng/books/abenii.jpg",
   description:
-    "Whitebread Publishers Limited publishes educational and literary books designed to inspire learning, creativity, and intellectual growth.",
+    "Whitebread Publishers Limited is an award-winning Nigerian educational and literary publisher specializing in quality textbooks, children's literature, and learning resources for schools and institutions.",
+  foundingDate: "2000",
+  areaServed: "NG",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "E22 Emirs Road",
+    addressLocality: "Ilorin",
+    addressRegion: "Kwara State",
+    postalCode: "240001",
+    addressCountry: "NG",
+  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      telephone: "+234-816-997-5561",
+      contactOption: "TollFree",
+      availableLanguage: ["English"],
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      email: "whitebreadpublishersltd@gmail.com",
+      availableLanguage: ["English"],
+    },
+  ],
+  sameAs: [],
+  priceRange: "$$",
+  knowsAbout: [
+    "Educational Publishing",
+    "Textbook Publishing",
+    "Children's Literature",
+    "Learning Resources",
+  ],
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Whitebread Publishers Limited",
+  image: "https://www.whitebreadpublishersltd.com.ng/books/abenii.jpg",
+  description: "Leading educational and literary publisher in Nigeria",
   address: {
     "@type": "PostalAddress",
     streetAddress: "E22 Emirs Road",
@@ -23,13 +65,14 @@ const organizationSchema = {
     addressRegion: "Kwara State",
     addressCountry: "NG",
   },
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "customer service",
-    telephone: "+2348169975561",
-    availableLanguage: ["English"],
+  telephone: "+234-816-997-5561",
+  email: "whitebreadpublishersltd@gmail.com",
+  url: "https://www.whitebreadpublishersltd.com.ng",
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "8.4957",
+    longitude: "4.5412",
   },
-  sameAs: [],
 };
 
 const websiteSchema = {
@@ -43,6 +86,33 @@ const websiteSchema = {
     "@type": "Organization",
     name: "Whitebread Publishers Limited",
   },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://www.whitebreadpublishersltd.com.ng/books?search={search_term_string}",
+    },
+    query: "required",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.whitebreadpublishersltd.com.ng",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Books",
+      item: "https://www.whitebreadpublishersltd.com.ng/books",
+    },
+  ],
 };
 
 export default function Home() {
@@ -54,7 +124,15 @@ export default function Home() {
       />
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Navbar />
 
